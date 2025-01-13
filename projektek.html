@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +11,167 @@
 </head>
 
 <body>
-<section class="Arduino">
-    <h2>Arduino projektem</h2>
-    <p>Ez még fejlesztés alatt...🔨</p>
-    <div class="arduino_kepek">
-        <div class="projekt">
-            <img src="fotok/arduino.JPEG" alt="Arduino-projekt" class="projekt_kep">
+    <section class="Arduino">
+        <a href="fooldal.html"><button class="button" role="button"><span class="text">FŐOLDAL</span></button></a>
+        <h1>Arduino projektem</h1>
+        <p>Ez még fejlesztés alatt...🔨</p>
+        <br>
+        <div class="arduino_kepek">
+            <div class="projekt">
+                <img src="fotok/arduino.JPEG" alt="Arduino-projekt" class="projekt_kep">
+                <div class="projekt_leiras">
+                    <h1>A Projekt kezdetleges fázisa</h1>
+                </div>
+            </div>
+            
+            <div class="projekt">
+                <img src="fotok/arduino_2.JPEG" alt="Arduino-projekt" class="projekt_kep">
+                <div class="projekt_leiras">
+                    <h1>A végső, befejezett projekt</h1>
+                </div>
+            </div>
+
+            <div class="projekt">
+                <video width="400" controls class="video">
+                    <source src="videok/arduino_video1.mp4" type="video/mp4">
+                    <source src="mov_bbb.ogg" type="video/ogg">
+                    Your browser does not support HTML video.
+                </video>
+                <div class="projekt_leiras">
+                    <h1>Manuális mód</h1>
+                </div>
+            </div>
+            <div class="projekt">
+                <video width="400" controls class="video">
+                    <source src="videok/arduino_video2.mp4" type="video/mp4">
+                    <source src="mov_bbb.ogg" type="video/ogg">
+                    Your browser does not support HTML video.
+                </video>
+                <div class="projekt_leiras">
+                    <h1>Pásztázás funkció</h1>
+                </div>
+            </div>
         </div>
-    </div>
-    
-</section>
+<div class="eszkozok">
+<h1><u>Felhasznált eszközök</u>:</h1>
+<ul>
+    <li><h2>Arduino Uno</h2></li>
+    <li><h2>Szervómotor SG90</h2></li>
+    <li><h2>LiquidCrystal I2C LCD</h2></li>
+    <li><h2>Ultrahangos távolságmérő szenzor HC-SR04</h2></li>
+    <li><h2>Joystick</h2></li>
+    <li><h2>Breadboard</h2></li>
+    <li><h2>Jumper kábelek</h2></li>
+  </ul>
+</div>
+
+<div class="arduino_kepek">
+<details>
+    <summary>Kattints ide a programkód megtekintéséhez</summary>
+    <pre><code>
+        #include <Wire.h>
+            #include <LiquidCrystal_I2C.h>
+            #include <Servo.h>
+             
+            LiquidCrystal_I2C lcd(0x27, 16, 2);
+             
+            Servo radarServo;
+            Servo joystickServo;
+             
+            const int trigPin = 8;
+            const int echoPin = 9;
+             
+            long duration;
+            int distance;
+             
+            int joyX = A1;
+            int joyButton = 2;
+             
+            bool isPanning = false;
+            int panDirection = 1;
+            int panAngle = 90;
+             
+            unsigned long previousMillis = 0;
+            const long interval = 1000;
+             
+            void setup() {
+              lcd.init();
+              lcd.backlight();
+              lcd.setCursor(0, 0);
+              lcd.print("Initializing...");
+             
+              radarServo.attach(11);
+              joystickServo.attach(10);
+             
+              pinMode(trigPin, OUTPUT);
+              pinMode(echoPin, INPUT);
+              pinMode(joyButton, INPUT_PULLUP);
+             
+              Serial.begin(9600);
+             
+              lcd.clear();
+              lcd.setCursor(0, 0);
+              lcd.print("Ready!");
+            }
+             
+            void loop() {
+              int valX = analogRead(joyX);
+              int joystickAngle = map(valX, 0, 1023, 0, 180);
+              joystickServo.write(joystickAngle);
+             
+              if (digitalRead(joyButton) == LOW) {
+                delay(50);
+                if (digitalRead(joyButton) == LOW) {
+                  isPanning = !isPanning;
+                  if (isPanning) {
+                    panAngle = 90;
+                    radarServo.write(panAngle);
+                    delay(500);
+                  }
+                  while (digitalRead(joyButton) == LOW);
+                  delay(50);
+                }
+              }
+             
+              if (isPanning) {
+                radarServo.write(panAngle);
+                panAngle += panDirection;
+             
+                if (panAngle <= 0 || panAngle >= 180) {
+                  panDirection = -panDirection;
+                }
+             
+                delay(20);
+              } else {
+                radarServo.write(joystickAngle);
+              }
+             
+              unsigned long currentMillis = millis();
+              if (currentMillis - previousMillis >= interval) {
+                previousMillis = currentMillis;
+             
+                digitalWrite(trigPin, LOW);
+                delayMicroseconds(2);
+                digitalWrite(trigPin, HIGH);
+                delayMicroseconds(10);
+                digitalWrite(trigPin, LOW);
+                duration = pulseIn(echoPin, HIGH);
+                distance = duration * 0.034 / 2;
+             
+                lcd.clear();
+                lcd.setCursor(3, 0);
+                lcd.print("Tavolsag:");
+                lcd.setCursor(5, 1);
+                lcd.print(distance);
+                lcd.print(" cm");
+             
+            
+              }
+            }
+    </code></pre>
+</details>
+</div>
+    </section>
 
 
 

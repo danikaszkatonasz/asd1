@@ -4,6 +4,11 @@
     border: 0 solid transparent;
 }
 
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -17,34 +22,135 @@ body {
     color: white; 
 }
 
+.button {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .button:active,
+  .button:hover {
+    outline: 0;
+  }
+  
+  .button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .button:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .button {
+      font-size: 24px;
+      min-width: 196px;
+    }
+  }
 .Arduino {
-    background: rgb(63,94,251);
     background: linear-gradient(106deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     border-radius: 7px;
-    padding: 6vh;       
+    padding: 6vh;  
+}
+
+.projekt {
+    background: #3c10ff;
+    border-radius: 3vh;
+    overflow: hidden;
 }
 
 .projekt_kep {
-    width: 80vh;
-    height: 60vh;
+    width: 70vh;
+    max-width: 100%;
+    height: auto;
     border-radius: 2vh;
 }
 
-.arduino_kepek img:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+.projekt_leiras {
+    padding: 20px;
+    align-content: center;
 }
 
 .arduino_kepek {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10vh;
 }
 
+.video {
+    max-width: 100%;
+    height: auto;
+}
+
+.eszkozok{
+    margin-top: 15vh;
+}
+
+details {
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+summary {
+    cursor: pointer;
+    padding: 8px;
+    font-weight: bold;
+    width: auto ;
+}
+
+summary:hover {
+    background: #4a08ff;
+}
+
+code {
+    display: block;
+    padding: 15px;
+    background: #160133;
+    border: 8px solid #000000;
+    max-width:100%;
+    width: 80vh;
+}
 
 footer{
     text-align: center;
     position: relative;
     bottom: 0;
 }
+
+@media (max-width:865px) {
+    code {
+        width: 50%;
+        font-size: 80%;
+    }
+    summary {
+        width:50%;
+    }
+
+}
+

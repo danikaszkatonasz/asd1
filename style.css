@@ -508,6 +508,13 @@ footer {
 
  
 /* -- RESPONSIVITY -- */
+
+@media (max-width:400px){
+    .logo span{
+        font-size: 80%;
+    }
+}
+
 @media (max-width:464px){
     .typewriter_szoveg{
         font-size: 70%;
@@ -525,7 +532,6 @@ footer {
 
     nav .logo {
         position: absolute;
-        top: 16px;
         left: 15px;
         font-size: 1.5rem;
     }
