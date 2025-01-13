@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0 solid transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #2b0a0a; 
+    color: white; 
+}
+
+.Arduino {
+    background: rgb(63,94,251);
+    background: linear-gradient(106deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    border-radius: 7px;
+    padding: 6vh;       
+}
+
+.projekt_kep {
+    width: 80vh;
+    height: 60vh;
+    border-radius: 2vh;
+}
+
+.arduino_kepek img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.arduino_kepek {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+footer{
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}

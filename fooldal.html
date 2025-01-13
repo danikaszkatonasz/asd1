@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" type="png"
+    href="fotok/Ikon.png">
+    <title>Portfólió</title>
+</head>
+<body>
+ <!------------- NAVIGATION BAR ------------->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <a href="fooldal.html" class="logo-link">
+                    <div class="alahuzas">
+                    <span>Győrfi Dániel</span>
+                    </div>
+                </a>
+                <span class="portfolio-szoveg">Portfóliója</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="fooldal.html">Főoldal</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#rolam">Rólam</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#projektek">Projektek</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="munkanaplo.html" target="_blank">Munkanapló</a></div>
+            </div>
+ <!------------- HAMBURGER MENU      ------------->
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#rolam">Rólam</a>
+                <a href="#projektek">Projektek</a>
+                <a href="munkanaplo.html" target="_blank">Munkanapló</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+<!------------- BEMUTATKOZÁS -->
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="fotok/img.JPEG" alt="Profilkép">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Szia! <span>Dániel</span> vagyok!</h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">Egy <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Jelenleg középiskolás diák vagyok, aki a technikusi vizsgára készül.</p>
+                <p>Az informatika iránti szenvedélyem már évek óta motivál, és folyamatosan próbálom bővíteni a tudásomat ezen a területen.</p>
+                <p>Szeretek új technológiákat felfedezni, jelenleg a webfejlesztés területén próbálom elmélyíteni tudásomat.</p>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    
+                    <a href="projektek.html" class = "gomb">
+                    <button class ="content" > Arduino Projekt </button>
+                    </a> 
+                </div>
+            </div>
+        </div>
+<!------------- RÓLAM ------------->
+        <div class="additional-content" id="rolam">
+            <h2>További infók rólam</h2>
+            <p>A programozás mellett nagy érdeklődést mutatok a robotika és az automatizálás iránt.</p>
+            <p>Szeretek önálló projekteken dolgozni, és kihívásokat keresni, amelyek segítenek fejlődni.</p>
+        </div>
+    </section>
+ <!------------- CISCO ------------->
+<section>
+<section class = "cisco">
+    <h2 class="cisco_szoveg">Cisco Network Academy</h2>
+    <div class="cisco_kepek">
+    <a href="https://www.credly.com/badges/fbd91c1d-1e0c-4d02-86ae-b93db363821e/public_url" target="_blank"><img src="fotok/badge.png" alt="Badge"></a>
+    <a href="https://www.credly.com/badges/a3fc8121-ddbd-4444-b136-985cc04472af/public_url" target="_blank"><img src="fotok/badge3.png"  style="--color:#4ECDC4" alt="Badge"></a>
+    <a href="https://www.credly.com/badges/97d73faa-5d64-4037-985d-36a99e43d127/public_url" target="_blank"><img src="fotok/badge2.png" alt="Badge"></a>
+    </div>  
+</section>
+
+ <!------------- PROJEKTEK ------------->
+<div class="gallery" id="projektek">
+
+ <!------------- MODALIS ABLAKOK ------------->
+    <div class="gallery" id="projektek">
+        <figure>
+            <img src="fotok/doboz.JPEG" alt="Szerelődoboz" class="gallery-img" data-description="Ez a projekt egy elektronikai szerelődoboz megtervezését és kivitelezését mutatja be.
+            <br> 
+            A munka során különös figyelmet fordítottam a precíz kábelezésre és a szakszerű elrendezésre.
+            <br>
+            A projekt magában foglalta a kábelek méretezését, és a biztonságos elektromos csatlakozások kialakítását.">
+            <figcaption>Szerelődoboz</figcaption>
+          </figure>
+
+         <figure>
+            <img src="fotok/ellenallas_figura.JPEG" alt="Ellenállás figura" class="gallery-img" data-description="Kreatív elektronikai projekt, ahol ellenállásokból és egy LED-ből készítettem egy figurát. 
+            <br>
+            A munka során különböző értékű ellenállásokat használtam fel, amelyekből forrasztottam a figura testrészeit.
+            <br>
+            A figura fejének egy piros LED-et használtam, a végtagjai pedig lila színkódolású ellenállásokból készültek.">
+            <figcaption>Ellenállás figura</figcaption>
+        </figure>
+
+        <figure>
+            <img src="fotok/vezetekek.JPEG" alt="Vezetékek" class="gallery-img" data-description="
+            Ennél a villanyszerelési feladatnál a vezetékek precíz elrendezése és bekötése volt a fő cél.">
+            <figcaption>Vezetékek</figcaption>
+        </figure>
+
+        <figure>
+            <img src="fotok/vezetek_csatorna.JPEG" alt="Vezeték csatorna" class="gallery-img" data-description=" Ennél a projektnél a feladatom az volt, hogy egy falapba előre kifúrt lyukakba kellett vezetékcsatornákat kialakítanom
+            <br>
+            A munka során fehér műanyag vezetékcsatornát használtam amelyet precízen úgy vágtam el, hogy 90°-ban törjön meg.
+            <br>
+            Így esztétikus és praktikus maradt.
+            ">
+            <figcaption>Vezeték csatorna</figcaption>
+        </figure>
+
+      </div>
+      
+      <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"> 
+
+        </div>
+      </div>
+
+</section>
+<!------------- SCROLL GOMB ------------->
+<button id="scrollUpBtn" onclick="scrollToTop()">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+ <!------------- SCROLL TO TOP ------------->
+<script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 100) {
+            document.getElementById("scrollUpBtn").style.display = "block";
+        } else {
+            document.getElementById("scrollUpBtn").style.display = "none";
+        }
+    };
+</script>
+
+<script src="script.js"></script>
+ <!------------- FOOTER ------------->
+</body>
+</html>
+
+<footer>
+    <p>© 2024 Győrfi Dániel. Minden jog fenntartva.</p>
+</footer>
