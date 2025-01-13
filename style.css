@@ -200,6 +200,7 @@ section {
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 600;
 }
+
 .content .typewriter-text {
     color: #c92c2c; 
     text-shadow: 0 0 10px #c92c2c;
@@ -507,7 +508,11 @@ footer {
 
  
 /* -- RESPONSIVITY -- */
-
+@media (max-width:464px){
+    .typewriter_szoveg{
+        font-size: 70%;
+    }
+}
 @media (min-width:885px) { 
     
     .hamburg {
