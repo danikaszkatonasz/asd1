@@ -419,7 +419,7 @@ footer {
 /* MODAL */
 
 /* Style the Image Used to Trigger the Modal */
-#myImg {
+#myImage {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
