@@ -41,9 +41,9 @@ function eraseText() {
     }
 }
 
-// Az oldal betöltésekor indítjuk el a typewriter effektust
+// Az oldal betöltésekor indul el a typewriter effektust
 window.onload = function () {
-    typeWriter(); // A typewriter effektust indítjuk
+    typeWriter(); // A typewriter effektus indul
     scrollUpBtn.style.display = "none"; // Az oldal betöltésekor rejtve marad a scroll up gomb
 };
 
@@ -58,9 +58,6 @@ window.onscroll = function () {
         scrollUpBtn.style.display = "none"; // Hide the button
     }
 };
-
-// Funkció, hogy a gomb rejtve maradjon az oldal betöltésekor
-// Ez az onload már le van kezelve, így itt eltávolítható
 
 // Scroll to top function
 function scrollToTop() {
