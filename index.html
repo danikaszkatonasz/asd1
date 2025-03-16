@@ -28,7 +28,7 @@
                 <div class="link"><a
                         href="#rolam">Rólam</a></div>
                 <div class="link"><a
-                        href="#projektek">Projektek</a></div>
+                        href="#projektek1">Projektek</a></div>
                 <div class="link"><a
                         href="munkanaplo.html" target="_blank">Munkanaplók</a></div>
                 <div class="link"><a
@@ -40,7 +40,7 @@
         <div class="dropdown">
             <div class="links">
                 <a href="#rolam">Rólam</a>
-                <a href="#projektek">Projektek</a>
+                <a href="#projektek1">Projektek</a>
                 <a href="munkanaplo.html" target="_blank">Munkanaplók</a>
                 <a href="oneletrajz.html" target="_blank">Önéletrajz</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
@@ -50,32 +50,57 @@
     <!------------- BEMUTATKOZÁS -->
     <section>
         <div class="main-container">
-            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+            <div class="image">
                 <img src="fotok/pfp.jpeg" alt="Profilkép">
             </div>
             <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Szia! <span>Dániel</span> vagyok!
+                <h1 >Szia! <span>Dániel</span> vagyok!
                 </h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <div class="typewriter">
                     <div class="typewriter_szoveg">Egy <span class="typewriter-text"></span><label for="">|</label>
                     </div>
                 </div>
                 <br>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Jelenleg középiskolás diák
-                    vagyok, aki a technikusi vizsgára készül.</p>
+                <p>Győrben tanulok ipari informatikai technikus szakon, és jelenleg az utolsó évemet töltöm.</p>
                 <br class="bemutatkozas_gap">
                 <p>Az informatika iránti szenvedélyem már évek óta motivál, és folyamatosan próbálom bővíteni a
                     tudásomat ezen a területen.</p>
                 <br class="bemutatkozas_gap">
                 <p>Szeretek új technológiákat felfedezni, jelenleg a webfejlesztés területén próbálom elmélyíteni
-                    tudásomat.</p>
+                    tudásomat, amellyel a technikusi vizsgámra is készülök.</p> 
+                <br class="bemutatkozas_gap">
+                <p>Weboldalamat HTML & CSS technológiával készítettem el.</p>
             </div>
         </div>
         <!------------- RÓLAM ------------->
         <div class="additional-content" id="rolam">
+            <a href="https://html.com/" target="_blank">
+            <img src="fotok/HTML-logo.png" class="html-logo" alt="HTML-logo">
+            </a>
+            <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
+            <img src="fotok/css-logo.png" class="css-logo" alt="css-logo">
+            </a>
             <h2>További infók rólam</h2>
-            <p>A programozás mellett nagy érdeklődést mutatok a robotika és az automatizálás iránt.</p>
+            <br>
+            <p>A webfejlesztés mellett nagy érdeklődést mutatok a robotika és az automatizálás iránt.</p>
+            <br>
+            <p>Az ipari automatizálás és programozás területén szereztem széles körű ismereteket, beleértve a PLC programozást, HMI konfigurálást, valamint Python, C és C++ programozást.</p> 
+            <br>
+            <p>Emellett tapasztalatom van mikrokontroller programozásban, robotok kezelésében és webfejlesztésben.</p>
+            <br>
             <p>Szeretek önálló projekteken dolgozni, és kihívásokat keresni, amelyek segítenek fejlődni.</p>
+        </div>
+        <div class="youtube">
+            <a href="https://www.youtube.com/@gyorfi.daniel" target="_blank">
+                <img src="fotok/Youtube-logo.png" alt="Youtube-logo" class="yt-logo">
+            </a>
+            <h1 style="text-align: center;">Szabadidőmben szívesen megörökítem a hobbijaimat, mint a biciklizés és a motorozás. Ezek a tevékenységek lehetőséget adnak arra, hogy szabadjára engedjem kreativitásomat és fejlesszem a technikai készségeimet.</h1>
+            <br>
+            <div class="yt-layout">
+                <div class="tagembed-widget" style="width:80%;height:70%" data-widget-id="2159319" data-tags="false"
+                    view-url="https://widget.tagembed.com/2159319"></div>
+                <script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
+            </div>
         </div>
     </section>
     <!------------- CISCO ------------->
@@ -93,18 +118,25 @@
         </section>
 
         <!------------- PROJEKTEK ------------->
+        <div class="gallery1" id="projektek1">
         <div class="content1">
-            <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+            <div class="btn">
 
                 <a href="projektek.html" class="gomb">
                     <button class="content"> Arduino Projektem </button>
                 </a>
             </div>
         </div>
-        <div class="gallery" id="projektek">
 
             <!------------- MODALIS ABLAKOK ------------->
+            <div class="pagisz">
+                <a href="https://gyor-pattantyus.www.intezmeny.edir.hu/" target="_blank">
+                <img src="fotok/pagisz_logo.png" alt="Pagisz_logo" style="width: 90px; position: absolute;">
+                </a>
+            
+            
             <div class="gallery" id="projektek">
+                
                 <figure>
                     <img src="fotok/doboz.JPEG" alt="Szerelődoboz" class="gallery-img" data-description="Ez a projekt egy elektronikai szerelődoboz megtervezését és kivitelezését mutatja be.
             <br> 
@@ -141,6 +173,7 @@
                 </figure>
 
             </div>
+        </div>
 
             <div id="imageModal" class="modal">
                 <span class="close">&times;</span>
@@ -172,10 +205,10 @@
 
     <script src="script.js"></script>
     <!------------- FOOTER ------------->
+    <footer>
+        <p>© 2025 Győrfi Dániel. Minden jog fenntartva.</p>
+    </footer>   
 </body>
 
 </html>
 
-<footer>
-    <p>© 2025 Győrfi Dániel. Minden jog fenntartva.</p>
-</footer>

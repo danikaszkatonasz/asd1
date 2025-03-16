@@ -245,11 +245,26 @@ section {
     box-shadow: 0 0 40px #c92c2c; /* Lighter red */
 }
 .additional-content {
-    padding: 3%;
+    padding: 20px;
     margin: 10vh auto;
     background-color: rgba(255, 255, 255, 0.1); /* Light transparent background for visibility */
     border-radius: 5px;
+    width: 95%;
 }
+
+.html-logo {
+    position: absolute;
+    width: 70px;
+    right: 130px;
+
+}
+
+.css-logo {
+    position: absolute;
+    width: 70px;
+    right: 60px;
+}
+
 .additional-content h2 {
     color: #c92c2c; /* Lighter red */
 }
@@ -257,11 +272,33 @@ section {
     color: white; /* Ensure text is readable */
 }
 
+.youtube {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5vh;
+    margin: 10vh auto;
+    border-radius: 5px;
+    width: 95%;
+    gap: 5vh;
+}
+
+.yt-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.yt-logo {
+    width: 80px;
+    position: sticky;
+}
+
 .cisco {
-    padding: 3px;
+    padding: 20px;
     margin: 10vh auto;
     background-color: rgba(255, 255, 255, 0.1); /* Light transparent background for visibility */
     border-radius: 10px;
+    width: 95%;
 }
 
 .cisco img {
@@ -303,7 +340,6 @@ section {
 }
 
 .gallery{
-    width: 98vw;
     height: 60vmin;
     display: flex;
     column-gap:25px;
@@ -312,6 +348,15 @@ section {
     flex-wrap: wrap;
     margin-top: 10vh;
     margin-bottom: 50px;
+}
+
+.pagisz {
+    padding: 3px;
+    margin: 10vh auto;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background for visibility */
+    border-radius: 10px;
+    width: 95%;
+    
 }
 
 
@@ -355,7 +400,6 @@ footer {
     left: 0;
     width: 100%;
     text-align: center;
-    padding-top: 30vh;
     padding-bottom: 3vh;
 }
 
@@ -427,8 +471,8 @@ footer {
   .modal-content {
     margin: auto;
     display: flex;
-    width: 80%;
-    max-width: 500px;
+    max-height: 550px;
+    max-width: 450px;
     justify-content: center;
     align-content: center;
 
@@ -441,12 +485,12 @@ footer {
     margin: auto;
     display: block;
     width: 80%;
-    height: 35%;
     max-width: 700px;
     text-align: center;
+    font-size: 2.5vh;
     color: #ffffff;
     padding-top: 1vh;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #3f3f3f;
     border-radius: 2vh;
   }
   
@@ -493,6 +537,7 @@ footer {
     align-items: center;
     margin: 5vw;
     min-width: 70%;
+    gap: 30px;
 }
  
 /* -- RESPONSIVITY -- */
@@ -534,7 +579,7 @@ footer {
     .cancel {
         display: block;
     }
-    .fa-solid fa-bars hamburg {
+    .fa-solid fa-bars {
         display: none;
     }
     .main-container .content {

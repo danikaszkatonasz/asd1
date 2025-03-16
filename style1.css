@@ -46,6 +46,14 @@ body {
     cursor: pointer;
     margin: auto;
   }
+
+.arduino {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
   
   .button:active,
   .button:hover {
