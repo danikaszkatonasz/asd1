@@ -31,7 +31,9 @@
                     <div class="link"><a href="oneletrajz.html" target="_blank">Önéletrajz</a></div>
                 </div>
                 <!------------- HAMBURGER MENU      ------------->
-                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+                <div class="hamburger-menu">
+                    <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+                </div>
             </div>
             <div class="dropdown">
                 <div class="links">
@@ -47,8 +49,8 @@
     <!------------- BEMUTATKOZÁS -->
     <section>
         <div class="main-container">
-            <div class="image">
-                <img src="fotok/pfp.jpeg" alt="Profilkép">
+            <div class="image">     
+                <img src="fotok/pfp1.jpg" alt="Profilkép">
             </div>
             <div class="content">
                 <h1 >Szia! <span>Dániel</span> vagyok!
@@ -58,15 +60,17 @@
                     </div>
                 </div>
                 <br>
-                <p>Győrben tanulok ipari informatikai technikus szakon, és jelenleg az utolsó évemet töltöm.</p>
-                <br class="bemutatkozas_gap">
-                <p>Az informatika iránti szenvedélyem már évek óta motivál, és folyamatosan próbálom bővíteni a
-                    tudásomat ezen a területen.</p>
-                <br class="bemutatkozas_gap">
-                <p>Szeretek új technológiákat felfedezni, jelenleg a webfejlesztés területén próbálom elmélyíteni
-                    tudásomat, amellyel a technikusi vizsgámra is készülök.</p> 
-                <br class="bemutatkozas_gap">
-                <p>Weboldalamat HTML & CSS technológiával készítettem el.</p>
+                <div class="bemutatkozas-szoveg">
+                    <p>Győrben tanulok ipari informatikai technikus szakon, és jelenleg az utolsó évemet töltöm.</p>
+                    <br class="bemutatkozas_gap">
+                    <p>Az informatika iránti szenvedélyem már évek óta motivál, és folyamatosan próbálom bővíteni a
+                        tudásomat ezen a területen.</p>
+                    <br class="bemutatkozas_gap">
+                    <p>Szeretek új technológiákat felfedezni, jelenleg a webfejlesztés területén próbálom elmélyíteni
+                        tudásomat, amellyel a technikusi vizsgámra is készülök.</p>
+                    <br class="bemutatkozas_gap">
+                    <p>Weboldalamat HTML & CSS technológiával készítettem el.</p>
+                </div>
             </div>
         </div>
         <!------------- RÓLAM ------------->
@@ -191,12 +195,12 @@
         }
 
         window.onscroll = function () {
-            if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 100) {
+            if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 200) {
                 document.getElementById("scrollUpBtn").style.display = "block";
             } else {
                 document.getElementById("scrollUpBtn").style.display = "none";
             }
-        };
+        }
     </script>
 
     <script src="script.js"></script>
