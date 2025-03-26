@@ -135,7 +135,7 @@ nav {
     transform: translateY(-500px);
     width: 100%;
     height: auto;
-    backdrop-filter: blur(4px) brightness(40%);
+    backdrop-filter: blur(4px) brightness(80%);
     box-shadow: 0 0 20px black;
     transition: 0.2s linear;    
 }
@@ -163,6 +163,8 @@ section {
     justify-content: space-evenly;
     align-items: center;
     transition: transform 0.2s ease-in-out;
+    margin-bottom: 24vh;
+    margin-top: 13vh;
 }
 .main-container .image {
     width: 350px;
