@@ -2,76 +2,90 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <link rel="website icon" type="png" href="fotok/arduino_icon.png">
-    <title>Projektek</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="website icon" type="png" href="fotok/arduino_icon.png">
+  <title>Projektek</title>
 </head>
 
 <body>
-    <section class="Arduino">
-      <div class="arduino">
-        <a href="index.html"><button class="button" role="button"><span class="text">FŐOLDAL</span></button></a>
-        <a href="https://www.arduino.cc/" target="_blank">
-          <img src="fotok/arduino-logo.png" alt="arduino_logo" style="width: 150px;">
-        </a>
-      </div>
-        <div class="eszkozok">
-          <h1><u>Felhasznált eszközök</u>:</h1>
-          <ul>
-              <li><h2>Arduino Uno</h2></li>
-              <li><h2>Szervómotor SG90</h2></li>
-              <li><h2>LiquidCrystal I2C LCD</h2></li>
-              <li><h2>Ultrahangos távolságmérő szenzor HC-SR04</h2></li>
-              <li><h2>Joystick</h2></li>
-              <li><h2>Breadboard</h2></li>
-              <li><h2>Jumper kábelek</h2></li>
-            </ul>
-          </div>
-          <br>
-        <div class="arduino_kepek">
-                        
-            <div class="projekt">
-                <img src="fotok/arduino.JPEG" alt="Arduino-projekt" class="projekt_kep">
-                <div class="projekt_leiras">
-                    <h1>A Projekt kezdetleges fázisa</h1>
-                </div>
-            </div>
-            
-            <div class="projekt">
-                <img src="fotok/arduino_2.JPEG" alt="Arduino-projekt" class="projekt_kep">
-                <div class="projekt_leiras">
-                    <h1>A végső, befejezett projekt</h1>
-                </div>
-            </div>
+  <section class="Arduino">
+    <div class="arduino">
+      <a href="index.html"><button class="button" role="button"><span class="text">FŐOLDAL</span></button></a>
+      <a href="https://www.arduino.cc/" target="_blank">
+        <img src="fotok/arduino-logo.png" alt="arduino_logo" style="width: 150px;">
+      </a>
+    </div>
+    <div class="eszkozok">
+      <h1><u>Felhasznált eszközök</u>:</h1>
+      <ul>
+        <li>
+          <h2>Arduino Uno</h2>
+        </li>
+        <li>
+          <h2>Szervómotor SG90</h2>
+        </li>
+        <li>
+          <h2>LiquidCrystal I2C LCD</h2>
+        </li>
+        <li>
+          <h2>Ultrahangos távolságmérő szenzor HC-SR04</h2>
+        </li>
+        <li>
+          <h2>Joystick</h2>
+        </li>
+        <li>
+          <h2>Breadboard</h2>
+        </li>
+        <li>
+          <h2>Jumper kábelek</h2>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <div class="arduino_kepek">
 
-            <div class="projekt">
-                <video width="400" controls class="video">
-                    <source src="videok/arduino_video1.mp4" type="video/mp4">
-                    <source src="mov_bbb.ogg" type="video/ogg">
-                    Your browser does not support HTML video.
-                </video>
-                <div class="projekt_leiras">
-                    <h1>Manuális mód</h1>
-                </div>
-            </div>
-            <div class="projekt">
-                <video width="400" controls class="video">
-                    <source src="videok/arduino_video2.mp4" type="video/mp4">
-                    <source src="mov_bbb.ogg" type="video/ogg">
-                    Your browser does not support HTML video.
-                </video>
-                <div class="projekt_leiras">
-                    <h1>Pásztázás funkció</h1>
-                </div>
-            </div>
+      <div class="projekt">
+        <img src="fotok/arduino.JPEG" alt="Arduino-projekt" class="projekt_kep">
+        <div class="projekt_leiras">
+          <h1>A Projekt kezdetleges fázisa</h1>
         </div>
+      </div>
 
-<div class="arduino_kepek">
-  <details>
-    <summary>Kattints ide a programkód megtekintéséhez</summary>
-    <pre><code>
+      <div class="projekt">
+        <img src="fotok/arduino_2.JPEG" alt="Arduino-projekt" class="projekt_kep">
+        <div class="projekt_leiras">
+          <h1>A végső, befejezett projekt</h1>
+        </div>
+      </div>
+
+      <div class="projekt">
+        <video width="400" controls class="video">
+          <source src="videok/arduino_video1.mp4" type="video/mp4">
+          <source src="mov_bbb.ogg" type="video/ogg">
+          Your browser does not support HTML video.
+        </video>
+        <div class="projekt_leiras">
+          <h1>Manuális mód</h1>
+        </div>
+      </div>
+      <div class="projekt">
+        <video width="400" controls class="video">
+          <source src="videok/arduino_video2.mp4" type="video/mp4">
+          <source src="mov_bbb.ogg" type="video/ogg">
+          Your browser does not support HTML video.
+        </video>
+        <div class="projekt_leiras">
+          <h1>Pásztázás funkció</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="arduino_kepek">
+      <details>
+        <summary>Kattints ide a programkód megtekintéséhez</summary>
+        <pre><code>
         #include <Wire.h>
             #include <LiquidCrystal_I2C.h>
             #include <Servo.h>
@@ -172,9 +186,9 @@
               }
             }
     </code></pre>
-  </details>
-</div>
-    </section>
+      </details>
+    </div>
+  </section>
 
 
 

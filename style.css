@@ -418,8 +418,14 @@ section {
 }
 
 .cisco_szoveg{
-    color: #c92c2c;
-    width: 30%;
+    font-size: 30px;
+    width: 50%;
+    background-image: url(svg/firka.svg);
+    background-repeat: no-repeat;
+    margin-top: 6px;
+    padding-bottom: 1.2vw;
+    padding-left: 2vw;
+    background-size: contain;
 }
 
 .gallery{
@@ -444,10 +450,14 @@ section {
 }
 
 .pagisz-szoveg {
+    align-items: center;
     text-align: center; 
     font-size: 17px;
+    background-image: url(svg/alahuzas.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 1.6vw;    
 }
-
 
 .pagisz-ikon {
     width: 90px; 
@@ -495,6 +505,34 @@ figcaption {
     text-align: center;
     margin-bottom: 20vh;
     padding-bottom: 20vh;
+}
+
+.video {
+    max-width: 100%;
+    height: auto;
+}
+
+.robot {
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+    margin: 10vh auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 95%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 25%;
+}
+
+.robot_overlay {
+    background: #c9e705;
+    border-radius: 3vh;
+    overflow: hidden;
+}
+
+.projekt_leiras {
+    padding: 20px;
 }
  
 footer {
