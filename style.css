@@ -241,9 +241,10 @@ section {
 }
 
 .content1 button {
-    width: 500px;
+    width: 50vw;
     height:250px;
-    margin: 40px;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
     background-color: #c92c2c; /* Lighter red */
     color: rgb(255, 255, 255);
     border: none;
@@ -275,6 +276,12 @@ section {
     background-color: transparent;
     font-weight: 700;
     box-shadow: 0 0 40px #c92c2c; /* Lighter red */
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    width: 95%;
 }
 .additional-content {
     padding: 20px;
