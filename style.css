@@ -425,8 +425,7 @@ section {
 }
 
 .cisco_szoveg{
-    font-size: 30px;
-    width: 50%;
+    font-size: 2rem;
     background-image: url(svg/firka.svg);
     background-repeat: no-repeat;
     margin-top: 6px;
@@ -439,7 +438,7 @@ section {
     height: 60vmin;
     display: flex;
     column-gap:25px;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 10vh;
@@ -459,11 +458,12 @@ section {
 .pagisz-szoveg {
     align-items: center;
     text-align: center; 
-    font-size: 17px;
+    font-size: 1.5rem;
     background-image: url(svg/alahuzas.svg);
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 1.6vw;    
+    padding-bottom: 1.6vw;
+    background-size: contain;    
 }
 
 .pagisz-ikon {
@@ -521,7 +521,11 @@ figcaption {
 
 .robot {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8vw;
     padding: 5vh;
     margin: 10vh auto;
     background-color: rgba(255, 255, 255, 0.1);
@@ -530,6 +534,17 @@ figcaption {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 25%;
+}
+.robot-logok{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-logok img {
+    width: 200px;
 }
 
 .robot_overlay {
@@ -717,8 +732,8 @@ footer {
 @media only screen and (max-width: 884px) {
     .hamburger-menu {
         display: block;
-        position: fixed;
-        right: 10px;
+        position: sticky;
+        left: 90%;
         font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
     }
 }
@@ -795,13 +810,21 @@ footer {
 @media (min-width:401px) and (max-width:823px){
 
     .cisco img {
-        margin-left: 13vh;
-        height: 50%;
-        width: 50%;
+        margin-left: 10vh;
+        height: 60%;
+        width: 60%;
+    }
+    .pagisz-szoveg{
+        margin-top: 12vh;
+        font-size: 1.1rem;
+    }
+    .additional-content img {
+        position: relative;
+        left: 1vw;
     }
 }
 
-@media (min-width:400px) and (max-width:470px){
+@media (min-width:399px) and (max-width:470px){
     .gallery {
         display: flex;
         flex-direction: column;
@@ -819,6 +842,22 @@ footer {
     figcaption {
         font-size: 1.3vh;
     }
+    .additional-content img {
+        position: relative;
+        left: 1vw;
+    }
+    .cisco_szoveg{
+        font-size: 1.3rem;
+    }
+    .pagisz-szoveg{
+        font-size: 1.3rem;
+    }
+    .pagisz-ikon{
+        width: 80px;
+    }
+    .pagisz-szoveg{
+        margin-top: 10vh;
+    }
 }
 
 @media (min-width:300px) and (max-width:399px){
@@ -834,6 +873,22 @@ footer {
 
     figcaption {
         font-size: 1.5vh;
+    }
+    .additional-content img {
+        position: relative;
+        left: 1vw;
+    }
+    .cisco_szoveg{
+        font-size: 1rem;
+    }
+    .pagisz-szoveg{
+        font-size: 1rem;
+    }
+    .pagisz-ikon{
+        width: 70px;
+    }
+    .pagisz-szoveg{
+        margin-top: 10vh;
     }
 
 }
