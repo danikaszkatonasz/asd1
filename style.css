@@ -102,6 +102,7 @@ nav {
 
 .nav-container .links {
     display: flex;
+    justify-content: space-evenly;
 }
 .nav-container .links a {
     position: relative;
