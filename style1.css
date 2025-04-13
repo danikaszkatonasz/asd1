@@ -120,6 +120,26 @@ body {
     margin-bottom: 2vh;
 }
 
+.kodreszlet {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+}
+
+.arduino_leiras {
+    line-height: 2;
+}
+
+.arduino_leiras h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.arduino_leiras h3 {
+    font-size: 25px;
+}
+
 details {
     padding: 10px;
     border-radius: 4px;
@@ -142,8 +162,6 @@ code {
     padding: 15px;
     background: #160133;
     border: 8px solid #000000;
-    max-width:100%;
-    width: 80vh;
 }
 
 footer{

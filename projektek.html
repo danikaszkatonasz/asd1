@@ -18,6 +18,16 @@
       </a>
     </div>
     <div class="eszkozok">
+      <h2>A képeken látható kapcsolást készítettem el az iskolában.</h2>
+      <br>
+      <h2>Képesek vagyunk 2 funkció közül választani: Manuális és Pásztázás.</h2>
+      <br>
+      <h2>Manuális módban mi tudjuk irányíitani a szenzort a joystick-al.</h2>
+      <br>
+      <h2>A pásztázás módot a joystick lenyomásával tudjuk aktiválni, ami azt teszi lehetővé hogy a motor teljes tartományban mozog jobbra-balra, elérve egy pásztázó mozgást.</h2>
+      <br>
+      <h2>Az LCD kijelzőn valós időben frissülnek a mért értékek.</h2>
+      <br>
       <h1><u>Felhasznált eszközök</u>:</h1>
       <ul>
         <li>
@@ -82,13 +92,34 @@
       </div>
     </div>
 
-    <div class="arduino_kepek">
+    <div class="kodreszlet">
+      <div class="arduino_leiras"> 
+        <h2>Wire.h:</h2> <h3>Az I2C kommunikációhoz szükséges könyvtár, amelyet az LCD kijelző vezérléséhez használnak.</h3>
+        <h2>LiquidCrystal_I2C.h:</h3> <h3>Az I2C interfészen keresztül működő LCD kijelző kezeléséhez szükséges könyvtár.</h3>
+        <h2>Servo.h:</h2> <h3>Szervómotorok vezérlésére szolgáló könyvtár.</h2>
+        <h2>duration és distance:</h2> <h3>Az ultrahangos érzékelő által mért időtartam és távolság.</h3>
+        <h2>isPanning, panDirection, és panAngle:</h2> <h3>A radar pásztázási állapotát, irányát és szögét tároló változók.</h3>
+        <h2>previousMillis és interval:</h2> <h3>Időzítéshez használt változók, amelyek a távolságmérés frissítési intervallumát határozzák meg.</h3>
+        <h2>Joystick vezérlése:</h2>
+        <h3>A"loop" függvényen belül működik.</h3>
+        <h3>A joystick X tengelyének analóg értékét olvassa (analogRead), majd azt átalakítja egy szögértékké (map), amelyet a szervómotorra küld (joystickServo.write()).</h3>
+        <h3>Ha megnyomják a joystick gombját (joyButton), akkor váltogatja az isPanning állapotot (pásztázás be/ki).</h3> 
+        <h3>Ha pásztázás bekapcsolt állapotban van, akkor beállítja a radar szögét középállásba (90 fok).</h3>
+        <h2>Radar pásztázasa</h2>
+        <h3>Ha pásztázási mód aktív (isPanning == true), akkor a radar szögét folyamatosan növeli vagy csökkenti.</h3>
+        <h3>Ha eléri a szélső értékeket (0 vagy 180 fok), akkor megfordítja az irányt.</h3>
+        <h2>Távolságmérés ultrahangos érzékelővel</h2>
+        <h3>A mért időből kiszámítja a távolságot centiméterben (distance = duration * 0.034 / 2).</h3>
+        <h3>Az eredményt megjeleníti az LCD kijelzőn.</h3>
+        </h3>
+      </div>
+      <div></div>
       <details>
         <summary>Kattints ide a programkód megtekintéséhez</summary>
         <pre><code>
-        #include <Wire.h>
-            #include <LiquidCrystal_I2C.h>
-            #include <Servo.h>
+        #include Wire.h
+            #include LiquidCrystal_I2C.h
+            #include Servo.h
              
             LiquidCrystal_I2C lcd(0x27, 16, 2);
              

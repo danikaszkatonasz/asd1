@@ -335,6 +335,11 @@ section {
     color: white; /* Ensure text is readable */
 }
 
+.gyvakk {
+    color: white;
+    font-weight: 800;
+}
+
 .youtube {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 5vh;
