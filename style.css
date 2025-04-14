@@ -308,7 +308,7 @@ section {
 
 .html-logo {
     position: absolute;
-    width: 70px;
+    width: 62px;
     right: 80px;
     transition: transform 1000ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
@@ -319,7 +319,7 @@ section {
 
 .css-logo {
     position: absolute;
-    width: 70px;
+    width: 62px;
     right: 15px;
     transition: transform 1000ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
@@ -568,7 +568,89 @@ figcaption {
 .projekt_leiras {
     padding: 20px;
 }
- 
+
+.urlap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10vh auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 95%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 25%;
+}
+
+.word {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.urlap img {
+    width: 90px;
+    transition: transform 1000ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    margin-top: 20px;
+}
+
+.urlap img:hover {
+    transform: scale(1.15);
+}
+
+.letoltes {
+    background: var(--color-back);
+    border-radius: 0.5em;
+    box-shadow:
+      inset 0px -6px 18px -6px rgba(168, 20, 20, 0),
+      inset rgb(53, 6, 6) -1px -1px 6px 0px,
+      inset 12px 0px 12px -6px rgba(3, 15, 20, 0),
+      inset -12px 0px 12px -6px rgba(73, 8, 2, 0),
+      ;
+    border: solid 3px #030f14;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0.7em 1.7em;
+    outline: none;
+    transition: all 0.3s;
+    user-select: none;
+  }
+  
+  .letoltes:hover {
+    box-shadow:
+      inset 0px -6px 18px -6px rgba(3, 15, 20, 1),
+      inset 0px 6px 18px -6px rgba(3, 15, 20, 1),
+      inset 12px 0px 12px -6px rgba(3, 15, 20, 0),
+      inset -12px 0px 12px -6px rgba(3, 15, 20, 0),
+      -1px -1px 6px 0px rgba(54, 69, 75, 1);
+  }
+  
+  .letoltes:active {
+    box-shadow:
+      inset 0px -12px 12px -6px rgba(3, 15, 20, 1),
+      inset 0px 12px 12px -6px rgba(3, 15, 20, 1),
+      inset 12px 0px 12px -6px rgba(3, 15, 20, 1),
+      inset -12px 0px 12px -6px rgba(3, 15, 20, 1),
+      -1px -1px 6px 0px rgba(54, 69, 75, 1);
+  }
+  
+  .text {
+    color: #c92c2c;
+    font-weight: 700;
+    margin: auto;
+    transition: all 0.3s;
+    width: fit-content;
+  }
+  
+  .letoltes:hover .text {
+    transform: scale(0.9);
+  }
+  
+  .letoltes:active .text {
+    transform: scale(0.8);
+  }
+
 footer {
     position: relative;
     bottom: 0;
@@ -580,16 +662,16 @@ footer {
 
 /* Scroll-Up Gomb Stilus */
 #scrollUpBtn {
-    display: none; /* Initially hide the button */
+    display: none; /* Initially hide the letoltes */
     position: fixed; /* Ensure it stays in the same place */
     bottom: 20px; /* Positioning from the bottom */
     right: 10px; /* Positioning from the right */
-    width: 60px; /* Button width */
-    height: 60px; /* Button height */
-    background-color: #c92c2c; /* Button background color */
+    width: 60px; /* letoltes width */
+    height: 60px; /* letoltes height */
+    background-color: #c92c2c; /* letoltes background color */
     color: white; /* Icon color */
     border: none; /* No border */
-    border-radius: 50%; /* Circular button */
+    border-radius: 50%; /* Circular letoltes */
     display: flex; /* Center the icon */
     justify-content: center; /* Center the icon horizontally */
     align-items: center; /* Center the icon vertically */
@@ -601,13 +683,13 @@ footer {
     animation: appear2 1s;
 }
 
-#scrollButton.show {
+#scrollletoltes.show {
     opacity: 1;
     pointer-events: all;
     transform: translateY(0);
 }
   
-#scrollButton.hidden {
+#scrollletoltes.hidden {
     opacity: 0;
     pointer-events: none;
     transform: translateY(50px);
@@ -647,10 +729,9 @@ footer {
   .modal-content {
     margin: auto;
     display: flex;
-    max-height: 550px;
+    max-height: 450px;
     max-width: 450px;
     justify-content: center;
-    align-content: center;
 
   }
   
@@ -663,7 +744,6 @@ footer {
     width: 80%;
     max-width: 700px;
     text-align: center;
-    font-size: 2.5vh;
     color: #ffffff;
     padding-top: 1vh;
     background-color: #3f3f3f;
@@ -681,7 +761,7 @@ footer {
     to {transform:scale(1)}
   }
   
-  /* The Close Button */ 
+  /* The Close letoltes */ 
    .close {
     position: absolute;
     top: 15px;
